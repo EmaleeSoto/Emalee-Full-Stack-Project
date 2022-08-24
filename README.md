@@ -7,7 +7,8 @@ This is an app that let's you find friends with similar gaming interests to conn
 - [Deployed API Server]()
 - [Deployed Frontend]()
 - [Trello Board]()
-- [ERD]() -[Wireframes]()
+- [Wireframes]()
+- [ERD]()
 
 ## Local Setup
 
