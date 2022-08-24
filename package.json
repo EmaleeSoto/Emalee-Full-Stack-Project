@@ -1,0 +1,11 @@
+{
+  "name": "emalee-full-stack-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "back-end/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emalee Soto",
+  "license": "ISC"
+}
