@@ -6,8 +6,8 @@ This is an app that let's you find friends with similar gaming interests to conn
 
 - [Deployed API Server]()
 - [Deployed Frontend]()
-- [Trello Board]()
-- [Wireframes]()
+- [Trello Board](https://trello.com/b/qy8TW6ZC/full-stack-portfolio-project)
+- [Wireframes](https://wireframe.cc/HwjF3b)
 - [ERD]()
 
 ## Local Setup
