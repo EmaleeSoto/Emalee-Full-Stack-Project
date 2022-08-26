@@ -8,6 +8,12 @@ const {
   deleteGamer,
 } = require("../queries/gamers.js");
 
+const {
+  checkName,
+  checkBoolean,
+  checkForNoAdditionalParams,
+} = require("../validations/checkGamer.js");
+
 // INDEX
 gamers.get("/", async (req, res) => {
   const allGamers = await getAllGamers();
@@ -30,24 +36,36 @@ gamers.get("/:id", async (req, res) => {
 });
 
 // CREATE
-gamers.post("/", async (req, res) => {
-  try {
-    const gamer = await createGamer(req.body);
-    res.json({ success: true, payload: gamer[0] });
-  } catch (error) {
-    res.status(400).json({ error: "bad request" });
+gamers.post(
+  "/",
+  checkName,
+  checkBoolean,
+  checkForNoAdditionalParams,
+  async (req, res) => {
+    try {
+      const gamer = await createGamer(req.body);
+      res.json({ success: true, payload: gamer[0] });
+    } catch (error) {
+      res.status(400).json({ error: "bad request" });
+    }
   }
-});
+);
 
 // UPDATE
-gamers.put("/:id", async (req, res) => {
-  try {
-    const gamer = await updateGamer(req.params.id, req.body);
-    res.json({ success: true, payload: gamer });
-  } catch (error) {
-    res.status(400).json({ success: false, error: "bad request" });
+gamers.put(
+  "/:id",
+  checkName,
+  checkBoolean,
+  checkForNoAdditionalParams,
+  async (req, res) => {
+    try {
+      const gamer = await updateGamer(req.params.id, req.body);
+      res.json({ success: true, payload: gamer });
+    } catch (error) {
+      res.status(400).json({ success: false, error: "bad request" });
+    }
   }
-});
+);
 
 // DELETE
 gamers.delete("/:id", async (req, res) => {

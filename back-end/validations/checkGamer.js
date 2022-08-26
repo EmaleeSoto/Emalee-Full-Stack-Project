@@ -1,8 +1,8 @@
 const checkName = (req, res, next) => {
-  if (req.body.name) {
+  if (req.body.gamertag) {
     next();
   } else {
-    res.status(400).json({ error: "Name is required" });
+    res.status(400).json({ error: "Gamertag is required" });
   }
 };
 
@@ -11,7 +11,7 @@ const checkBoolean = (req, res, next) => {
   if (status == true || status == false || status == undefined) {
     next();
   } else {
-    res.status(400).json({ error: "status must be a boolean value" });
+    res.status(400).json({ error: "Status must be a boolean value" });
   }
 };
 
