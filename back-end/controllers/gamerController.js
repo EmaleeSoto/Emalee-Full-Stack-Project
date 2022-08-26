@@ -1,6 +1,6 @@
 const express = require("express");
 const gamers = express.Router();
-const { getAllGamers } = requrie("../queries/gamers.js");
+const { getAllGamers } = require("../queries/gamers.js");
 
 // INDEX
 gamers.get("/", async (req, res) => {
