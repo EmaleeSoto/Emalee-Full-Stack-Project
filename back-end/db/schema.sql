@@ -5,7 +5,7 @@ CREATE DATABASE party_up;
 
 CREATE TABLE gamers (
     id SERIAL PRIMARY KEY,
-    gamerTag TEXT NOT NULL,
+    gamertag TEXT NOT NULL,
     pronouns TEXT,
     game TEXT NOT NULL,
     rank TEXT,
@@ -13,8 +13,8 @@ CREATE TABLE gamers (
     image TEXT,
     country TEXT,
     about TEXT,
-    socialMediaOne TEXT,
-    socialMediaTwo TEXT,
-    socialMediaThree TEXT,
-    status BOOLEAN NOT NULL
+    socialmediaone TEXT,
+    socialmediatwo TEXT,
+    socialmediathree TEXT,
+    status BOOLEAN
 );
