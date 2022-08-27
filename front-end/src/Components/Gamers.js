@@ -18,7 +18,7 @@ export default function Gamers() {
   }, []);
 
   return (
-    <div>
+    <div className="gamer-wrapper">
       {gamers.map((gamer) => {
         return <Gamer gamer={gamer} />;
       })}
