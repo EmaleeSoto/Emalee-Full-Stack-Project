@@ -19,8 +19,10 @@ const checkForNoAdditionalParams = (req, res, next) => {
   const {
     gamertag,
     pronouns,
+    tagline,
     game,
     rank,
+    role,
     age,
     image,
     country,

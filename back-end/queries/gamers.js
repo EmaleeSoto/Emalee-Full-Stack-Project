@@ -26,12 +26,14 @@ const createGamer = async (gamer) => {
         "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
     }
     return await db.any(
-      "INSERT INTO gamers (gamertag, pronouns, game, rank, age, image, country, about, socialmediaone, socialmediatwo, socialmediathree, status) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *",
+      "INSERT INTO gamers (gamertag, pronouns, tagline, game, rank, role, age, image, country, about, socialmediaone, socialmediatwo, socialmediathree, status) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING *",
       [
         gamer.gamertag,
         gamer.pronouns,
+        gamer.tagline,
         gamer.game,
         gamer.rank,
+        gamer.role,
         gamer.age,
         gamer.image,
         gamer.country,
@@ -49,12 +51,14 @@ const createGamer = async (gamer) => {
 const updateGamer = async (id, gamer) => {
   try {
     return await db.one(
-      "UPDATE gamers SET gamertag=$1, pronouns=$2, game=$3, rank=$4, age=$5, image=$6, country=$7, about=$8, socialmediaone=$9, socialmediatwo=$10, socialmediathree=$11, status=$12 where id=$13 RETURNING *",
+      "UPDATE gamers SET gamertag=$1, pronouns=$2, tagline=$3, game=$4, rank=$5, role=$6, age=$7, image=$8, country=$9, about=$10, socialmediaone=$11, socialmediatwo=$12, socialmediathree=$13, status=$14 where id=$15 RETURNING *",
       [
         gamer.gamertag,
         gamer.pronouns,
+        gamer.tagline,
         gamer.game,
         gamer.rank,
+        gamer.role,
         gamer.age,
         gamer.image,
         gamer.country,
