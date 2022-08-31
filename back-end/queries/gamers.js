@@ -48,10 +48,10 @@ const createGamer = async (gamer) => {
 };
 
 // UPDATE
-const updateGamer = async (id, gamer) => {
+const updateGamer = async (gamer, id) => {
   try {
     return await db.one(
-      "UPDATE gamers SET gamertag=$1, pronouns=$2, tagline=$3, game=$4, rank=$5, role=$6, age=$7, image=$8, country=$9, about=$10, socialmediaone=$11, socialmediatwo=$12, socialmediathree=$13, status=$14 where id=$15 RETURNING *",
+      "UPDATE gamers SET gamertag=$1, pronouns=$2, tagline=$3, game=$4, rank=$5, role=$6, age=$7, image=$8, country=$9, about=$10, socialmediaone=$11, socialmediatwo=$12, socialmediathree=$13, status=$14 WHERE id=$15 RETURNING *",
       [
         gamer.gamertag,
         gamer.pronouns,

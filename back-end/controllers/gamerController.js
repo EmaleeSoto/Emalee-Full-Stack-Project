@@ -59,7 +59,7 @@ gamers.put(
   checkForNoAdditionalParams,
   async (req, res) => {
     try {
-      const gamer = await updateGamer(req.params.id, req.body);
+      const gamer = await updateGamer(req.body, req.params.id);
       res.json({ success: true, payload: gamer });
     } catch (error) {
       res.status(400).json({ success: false, error: "bad request" });

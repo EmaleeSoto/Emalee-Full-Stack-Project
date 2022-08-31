@@ -86,7 +86,7 @@ export default function NewGamer() {
         <br></br>
         <label htmlFor="about">About Me: </label>
         <br></br>
-        <input id="about" type="text" onChange={handleTextChange} />
+        <textarea id="about" onChange={handleTextChange} rows="6" cols="50" />
         <br></br>
         <label htmlFor="socialmediaone">First Social Media: </label>
         <br></br>
