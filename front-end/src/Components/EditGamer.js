@@ -68,6 +68,7 @@ export default function EditGamer() {
           type="text"
           onChange={handleTextChange}
           value={gamer.gamertag}
+          maxlength="30"
         />
         <br></br>
         <label htmlFor="pronouns">Pronouns: </label>
@@ -86,6 +87,7 @@ export default function EditGamer() {
           type="text"
           onChange={handleTextChange}
           value={gamer.tagline}
+          maxlength="100"
         />
         <br></br>
         <label htmlFor="game">Game of Choice: </label>
@@ -150,6 +152,7 @@ export default function EditGamer() {
           rows="6"
           cols="50"
           value={gamer.about}
+          maxlength="300"
         />
         <br></br>
         <label htmlFor="socialmediaone">First Social Media: </label>
@@ -189,7 +192,7 @@ export default function EditGamer() {
         <br></br>
         <input className="submit-new" type="submit" value="Submit" />
       </form>
-      <Link to={`/snacks/${id}`}>
+      <Link to={`/gamers/${id}`}>
         <button className="back">{`Never Mind!`}</button>
       </Link>
     </div>

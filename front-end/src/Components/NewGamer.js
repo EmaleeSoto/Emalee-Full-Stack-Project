@@ -50,7 +50,12 @@ export default function NewGamer() {
       <form id="new-gamer" onSubmit={handleSubmit}>
         <label htmlFor="gamertag">Gamertag: </label>
         <br></br>
-        <input id="gamertag" type="text" onChange={handleTextChange} />
+        <input
+          id="gamertag"
+          type="text"
+          onChange={handleTextChange}
+          maxlength="30"
+        />
         <br></br>
         <label htmlFor="pronouns">Pronouns: </label>
         <br></br>
@@ -58,7 +63,12 @@ export default function NewGamer() {
         <br></br>
         <label htmlFor="tagline">Tagline: </label>
         <br></br>
-        <input id="tagline" type="text" onChange={handleTextChange} />
+        <input
+          id="tagline"
+          type="text"
+          onChange={handleTextChange}
+          maxlength="100"
+        />
         <br></br>
         <label htmlFor="game">Game of Choice: </label>
         <br></br>
@@ -86,7 +96,13 @@ export default function NewGamer() {
         <br></br>
         <label htmlFor="about">About Me: </label>
         <br></br>
-        <textarea id="about" onChange={handleTextChange} rows="6" cols="50" />
+        <textarea
+          id="about"
+          onChange={handleTextChange}
+          rows="6"
+          cols="50"
+          maxlength="300"
+        />
         <br></br>
         <label htmlFor="socialmediaone">First Social Media: </label>
         <br></br>
