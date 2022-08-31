@@ -68,7 +68,7 @@ export default function EditGamer() {
           type="text"
           onChange={handleTextChange}
           value={gamer.gamertag}
-          maxlength="30"
+          maxlength="20"
         />
         <br></br>
         <label htmlFor="pronouns">Pronouns: </label>
