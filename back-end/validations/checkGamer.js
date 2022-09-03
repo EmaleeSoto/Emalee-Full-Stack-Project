@@ -17,6 +17,7 @@ const checkBoolean = (req, res, next) => {
 
 const checkForNoAdditionalParams = (req, res, next) => {
   const {
+    id,
     gamertag,
     pronouns,
     tagline,

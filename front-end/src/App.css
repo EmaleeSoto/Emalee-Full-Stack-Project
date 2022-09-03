@@ -15,6 +15,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+#sign-up {
+  grid-column: 6 / span 7;
+}
+
 .gamer-card {
   /* background-color: #B1B5ED; */
   background-color: #C9DCFC;
