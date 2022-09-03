@@ -1,4 +1,5 @@
 import React from "react";
+import CountrySelectMenu from "./CountrySelectMenu";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -137,11 +138,16 @@ export default function EditGamer() {
         <br></br>
         <label htmlFor="country">Country: </label>
         <br></br>
-        <input
+        {/* <input
           id="country"
           type="text"
           onChange={handleTextChange}
           value={gamer.country}
+        /> */}
+        <CountrySelectMenu
+          id="country"
+          value={gamer.country}
+          handleSelectChange={handleTextChange}
         />
         <br></br>
         <label htmlFor="about">About Me: </label>

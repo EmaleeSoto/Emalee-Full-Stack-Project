@@ -1,4 +1,5 @@
 import React from "react";
+import CountrySelectMenu from "./CountrySelectMenu";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -54,7 +55,7 @@ export default function NewGamer() {
           id="gamertag"
           type="text"
           onChange={handleTextChange}
-          maxlength="20"
+          maxLength="20"
         />
         <br></br>
         <label htmlFor="pronouns">Pronouns: </label>
@@ -67,7 +68,7 @@ export default function NewGamer() {
           id="tagline"
           type="text"
           onChange={handleTextChange}
-          maxlength="100"
+          maxLength="100"
         />
         <br></br>
         <label htmlFor="game">Game of Choice: </label>
@@ -92,7 +93,8 @@ export default function NewGamer() {
         <br></br>
         <label htmlFor="country">Country: </label>
         <br></br>
-        <input id="country" type="text" onChange={handleTextChange} />
+        {/* <input id="country" type="text" onChange={handleTextChange} /> */}
+        <CountrySelectMenu id="country" handleSelectChange={handleTextChange} />
         <br></br>
         <label htmlFor="about">About Me: </label>
         <br></br>
@@ -101,7 +103,7 @@ export default function NewGamer() {
           onChange={handleTextChange}
           rows="6"
           cols="50"
-          maxlength="300"
+          maxLength="300"
         />
         <br></br>
         <label htmlFor="socialmediaone">First Social Media: </label>
