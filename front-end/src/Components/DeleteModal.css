@@ -1,0 +1,56 @@
+.delete-modal-wrapper {
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.modal-box {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 40%;
+    width: 60%;
+    /* overflow-y: auto; */
+    background-color: #222033;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    z-index: 101;
+    padding: 40px;
+}
+
+#modal-button {
+    position: absolute;
+    bottom: 10%; 
+    left: 20%;
+    border-radius: 15px;
+    background-color: white;
+    height: 40px;
+    font-size: large;
+}
+
+#modal-button:hover {
+    cursor: pointer;
+    background-color: #222132;
+    left: 20%;
+    border-color: white;
+    color: white;
+}
+
+#modal-image {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}

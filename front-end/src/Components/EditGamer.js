@@ -1,5 +1,4 @@
 import React from "react";
-import CountrySelectMenu from "./CountrySelectMenu";
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -56,11 +55,12 @@ export default function EditGamer() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    editGamer(gamer, id);
+    editGamer(gamer);
   };
 
   return (
     <div>
+      {console.log(gamer)}
       <form id="new-gamer" onSubmit={handleSubmit}>
         <label htmlFor="gamertag">Gamertag: </label>
         <br></br>
@@ -69,7 +69,7 @@ export default function EditGamer() {
           type="text"
           onChange={handleTextChange}
           value={gamer.gamertag}
-          maxlength="20"
+          maxLength="20"
         />
         <br></br>
         <label htmlFor="pronouns">Pronouns: </label>
@@ -88,7 +88,7 @@ export default function EditGamer() {
           type="text"
           onChange={handleTextChange}
           value={gamer.tagline}
-          maxlength="100"
+          maxLength="100"
         />
         <br></br>
         <label htmlFor="game">Game of Choice: </label>
@@ -138,16 +138,11 @@ export default function EditGamer() {
         <br></br>
         <label htmlFor="country">Country: </label>
         <br></br>
-        {/* <input
+        <input
           id="country"
           type="text"
           onChange={handleTextChange}
           value={gamer.country}
-        /> */}
-        <CountrySelectMenu
-          id="country"
-          value={gamer.country}
-          handleSelectChange={handleTextChange}
         />
         <br></br>
         <label htmlFor="about">About Me: </label>
@@ -158,7 +153,7 @@ export default function EditGamer() {
           rows="6"
           cols="50"
           value={gamer.about}
-          maxlength="300"
+          maxLength="300"
         />
         <br></br>
         <label htmlFor="socialmediaone">First Social Media: </label>

@@ -19,13 +19,20 @@ export default function Nav() {
         </Link>
       </div>
       <div>
-        <Link to="/sign-in" id="sign-in">
-          <h3>Sign In</h3>
+        <Link to="/about">
+          <h3>About</h3>
         </Link>
       </div>
-      <div>
+      <div id="login-wrapper">
+        <Link to="/sign-in" id="sign-in">
+          <button>
+            <span>Log In</span>
+          </button>
+        </Link>
         <Link to="/sign-up" id="sign-up">
-          <h3>Sign Up</h3>
+          <button>
+            <span>Sign Up</span>
+          </button>
         </Link>
       </div>
     </nav>

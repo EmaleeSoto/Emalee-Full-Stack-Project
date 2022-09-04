@@ -1,3 +1,8 @@
+h2 {
+  text-align: center;
+  color: white;
+}
+
 nav {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -15,8 +20,60 @@ nav a:hover {
   text-decoration: underline;
 }
 
+input {
+  height: 35px;
+  width: 300px;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;}
+
+#login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 8;
+}
+
+#login-wrapper button {
+  padding: 6px;
+  border-radius: 20px;
+}
+
+#login-wrapper button:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+}
+
+#sign-in {
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#sign-in span{
+  font-size: large;
+}
+
 #sign-up {
-  grid-column: 6 / span 7;
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#sign-up button {
+  background-color: #CCDCF9;
+}
+
+#sign-up span{
+  font-size: large;
+}
+
+.sign-up-section {
+  text-align: center;
+  margin-top: 10%;
 }
 
 .gamer-card {
@@ -24,6 +81,7 @@ nav a:hover {
   background-color: #C9DCFC;
   width: 25em;
   text-align: center;
+  overflow-y: auto;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px;
@@ -44,6 +102,7 @@ nav a:hover {
 }
 
 .gamer-card h2 {
+  color: #4A489D;
   display: inline;
 }
 
@@ -55,14 +114,17 @@ nav a:hover {
   text-align: center;
 }
 
+.search-bar {
+  margin: 2%;
+}
+
 .gamer-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
+  margin-top: 1em;
 }
 
 .gamer-card img {
-  /* height: 250px;
-  width: 290px; */
   float: left;
   width:  100px;
   height: 100px;
@@ -71,10 +133,49 @@ nav a:hover {
   border-radius: 10px;
 }
 
-
-#new-gamer {
-  color: white;
+.gamer-details {
+  text-align: center;
 }
+
+.gamer-details #back-button {
+  position: fixed;
+  top: 7%;
+  left: 15%;
+}
+
+
+.gamer-image img {
+  display: flex;
+  left: 10%;
+}
+
+.showNavigation {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.new-gamer {
+  position: relative;
+  overflow-y: scroll;
+  color: white;
+  left: 20%;
+}
+
+.new-gamer input, .new-gamer label {
+
+}
+
+.new-gamer input, .new-gamer textarea, .new-gamer select {
+  position: relative;
+  left: 5%;
+  margin: 10px;
+}
+
+.new-gamer input[type=checkbox] {
+  height: 20px;
+  width: 20px;
+}
+
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
