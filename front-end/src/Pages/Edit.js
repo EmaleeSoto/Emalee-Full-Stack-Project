@@ -2,7 +2,7 @@ import EditGamer from "../Components/EditGamer";
 
 export default function Edit() {
   return (
-    <div>
+    <div className="Edit">
       <EditGamer />
     </div>
   );

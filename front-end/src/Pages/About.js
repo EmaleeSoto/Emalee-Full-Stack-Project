@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function () {
+export default function About() {
   return (
-    <div>
-      <header>
-        <h2>About Party Up!</h2>
-      </header>
+    <div className="About">
+      <h2>About Party Up!</h2>
       <section>
         <p>
           Party Up! was created as a match-making site to bring gamers together.

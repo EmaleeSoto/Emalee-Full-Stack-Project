@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Nav from "./Components/Nav";
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
@@ -15,7 +14,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Nav />
+        <header>
+          <Nav />
+        </header>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
