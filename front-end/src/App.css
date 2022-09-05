@@ -1,6 +1,6 @@
 h2 {
   text-align: center;
-  color: white;
+  color: #CDDBF9;
 }
 
 nav {
@@ -11,7 +11,7 @@ nav {
 
 nav a {
   /* color: #ECDDD0; */
-  color: #ACC4E7;
+  color: #CDDBF9;
   text-decoration: none;
   font-family: monospace;
 }
@@ -78,8 +78,9 @@ input {
 
 .gamer-card {
   /* background-color: #B1B5ED; */
-  background-color: #C9DCFC;
+  background-color: #8176C3;
   width: 25em;
+  height: 10em;
   text-align: center;
   overflow-y: auto;
   border: 1px solid black;
@@ -93,7 +94,8 @@ input {
 
 
 .gamer-card a {
-  color: #4A489D;
+  /* color: #CCDCF9; */
+  color: #F4D3D4;
   text-decoration: none;
 }
 
@@ -102,7 +104,9 @@ input {
 }
 
 .gamer-card h2 {
-  color: #4A489D;
+  /* color: #D788CC; */
+  /* color: #CCDCF9; */
+  color: #F4D3D4;
   display: inline;
 }
 
@@ -126,10 +130,9 @@ input {
 
 .gamer-card img {
   float: left;
-  width:  100px;
-  height: 100px;
+  width:  150px;
+  height: 150px;
   object-fit: cover;
-  border: 2px solid white;
   border-radius: 10px;
 }
 
@@ -161,17 +164,15 @@ input {
   left: 20%;
 }
 
-.new-gamer input, .new-gamer label {
-
-}
-
 .new-gamer input, .new-gamer textarea, .new-gamer select {
-  position: relative;
-  left: 5%;
+  /* position: relative; */
+  /* left: 10%; */
+  display: inline-block;
   margin: 10px;
-}
 
-.new-gamer input[type=checkbox] {
+} 
+
+new-gamer input[type=checkbox] {
   height: 20px;
   width: 20px;
 }

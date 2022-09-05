@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Nav from "./Components/Nav";
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
@@ -6,7 +7,6 @@ import New from "./Pages/New";
 import Edit from "./Pages/Edit";
 import SignUp from "./Pages/SignUp";
 import DeleteModal from "./Components/DeleteModal";
-
 import "./App.css";
 import Home from "./Pages/Home";
 import About from "./Pages/About";

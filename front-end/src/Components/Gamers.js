@@ -6,51 +6,40 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function Gamers() {
   const [gamers, setGamers] = useState([]);
+  const [searchedGamers, setSearchedGamers] = useState([]);
 
   useEffect(() => {
     axios
       .get(`${API}/gamers`)
       .then((response) => {
         setGamers(response.data.payload);
+        setSearchedGamers(response.data.payload);
       })
       .catch((error) => {
         console.warn(error);
       });
   }, []);
 
-  const searchFor = (search, gamers) => {
-    const newGamers = !search
-      ? gamers
-      : gamers.filter((gamer) => {
-          return (
-            gamer.gamertag === search ||
-            gamer.game === search ||
-            gamer.rank === search
-          );
-        });
-
-    setGamers(newGamers);
+  const searchFor = (gamers, search) => {
+    const formatSearch = search.toLowerCase();
+    const newGamers =
+      formatSearch === undefined || formatSearch === ""
+        ? gamers
+        : gamers.filter((gamer) => {
+            return (
+              gamer.gamertag.toLowerCase().includes(formatSearch) ||
+              gamer.game.toLowerCase().includes(formatSearch) ||
+              gamer.rank.toLowerCase().includes(formatSearch)
+            );
+          });
+    setSearchedGamers(newGamers);
   };
-
-  // pickCohort = (code, array) => {
-  //   const newArray =
-  //     !code || code === "All Classes"
-  //       ? array
-  //       : array.filter((element) => {
-  //           return element.cohort.cohortCode === code;
-  //         });
-
-  //   this.setState({
-  //     classCode: code,
-  //     currentCohort: newArray,
-  //   });
-  // };
 
   return (
     <div className="gamers-div">
       <SearchBar gamers={gamers} searchFor={searchFor} />
       <div className="gamer-wrapper">
-        {gamers.map((gamer) => {
+        {searchedGamers.map((gamer) => {
           return <Gamer gamer={gamer} />;
         })}
       </div>
