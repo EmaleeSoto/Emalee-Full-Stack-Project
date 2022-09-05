@@ -49,78 +49,120 @@ export default function NewGamer() {
   return (
     <div>
       <form className="new-gamer" onSubmit={handleSubmit}>
-        <label htmlFor="gamertag">Gamertag: </label>
+        <span>
+          <label htmlFor="gamertag">Gamertag: </label>
+          <input
+            id="gamertag"
+            type="text"
+            onChange={handleTextChange}
+            maxLength="20"
+          />
+        </span>
         <br></br>
-        <input
-          id="gamertag"
-          type="text"
-          onChange={handleTextChange}
-          maxLength="20"
-        />
+
+        <span>
+          <label htmlFor="pronouns">Pronouns: </label>
+
+          <input id="pronouns" type="text" onChange={handleTextChange} />
+        </span>
         <br></br>
-        <label htmlFor="pronouns">Pronouns: </label>
+
+        <span>
+          <label htmlFor="tagline">Tagline: </label>
+
+          <input
+            id="tagline"
+            type="text"
+            onChange={handleTextChange}
+            maxLength="100"
+          />
+        </span>
         <br></br>
-        <input id="pronouns" type="text" onChange={handleTextChange} />
+
+        <span>
+          <label htmlFor="game">Game of Choice: </label>
+
+          <input id="game" type="text" onChange={handleTextChange} />
+        </span>
         <br></br>
-        <label htmlFor="tagline">Tagline: </label>
+
+        <span>
+          <label htmlFor="rank">Rank: </label>
+
+          <input id="rank" type="text" onChange={handleTextChange} />
+        </span>
         <br></br>
-        <input
-          id="tagline"
-          type="text"
-          onChange={handleTextChange}
-          maxLength="100"
-        />
+
+        <span>
+          <label htmlFor="role">Role: </label>
+
+          <input id="role" type="text" onChange={handleTextChange} />
+        </span>
         <br></br>
-        <label htmlFor="game">Game of Choice: </label>
+
+        <span>
+          <label htmlFor="age">Age: </label>
+
+          <input id="age" type="number" onChange={handleTextChange} />
+        </span>
+
         <br></br>
-        <input id="game" type="text" onChange={handleTextChange} />
+        <span>
+          <label htmlFor="image">Profile Pic: </label>
+
+          <input id="image" type="text" onChange={handleTextChange} />
+        </span>
         <br></br>
-        <label htmlFor="rank">Rank: </label>
+
+        <span>
+          <label htmlFor="country">Country: </label>
+          <CountrySelectMenu
+            id="country"
+            handleSelectChange={handleTextChange}
+          />
+        </span>
         <br></br>
-        <input id="rank" type="text" onChange={handleTextChange} />
+
+        <span>
+          <label htmlFor="about">About Me: </label>
+          <textarea
+            id="about"
+            onChange={handleTextChange}
+            rows="6"
+            cols="50"
+            maxLength="300"
+          />
+        </span>
         <br></br>
-        <label htmlFor="role">Role: </label>
+
+        <span>
+          <label htmlFor="socialmediaone">First Social Media: </label>
+          <input id="socialmediaone" type="text" onChange={handleTextChange} />
+        </span>
         <br></br>
-        <input id="role" type="text" onChange={handleTextChange} />
+
+        <span>
+          <label htmlFor="socialmediatwo">Second Social Media: </label>
+          <input id="socialmediatwo" type="text" onChange={handleTextChange} />
+        </span>
         <br></br>
-        <label htmlFor="age">Age: </label>
+
+        <span>
+          <label htmlFor="socialmediathree">Third Social Media: </label>
+          <input
+            id="socialmediathree"
+            type="text"
+            onChange={handleTextChange}
+          />
+        </span>
         <br></br>
-        <input id="age" type="number" onChange={handleTextChange} />
+
+        <span>
+          <label htmlFor="status">Currently Looking for Duo? </label>
+          <input id="status" type="checkbox" onChange={handleCheckbox} />
+        </span>
         <br></br>
-        <label htmlFor="image">Profile Pic: </label>
-        <br></br>
-        <input id="image" type="text" onChange={handleTextChange} />
-        <br></br>
-        <label htmlFor="country">Country: </label>
-        <br></br>
-        {/* <input id="country" type="text" onChange={handleTextChange} /> */}
-        <CountrySelectMenu id="country" handleSelectChange={handleTextChange} />
-        <br></br>
-        <label htmlFor="about">About Me: </label>
-        <br></br>
-        <textarea
-          id="about"
-          onChange={handleTextChange}
-          rows="6"
-          cols="50"
-          maxLength="300"
-        />
-        <br></br>
-        <label htmlFor="socialmediaone">First Social Media: </label>
-        <br></br>
-        <input id="socialmediaone" type="text" onChange={handleTextChange} />
-        <br></br>
-        <label htmlFor="socialmediatwo">Second Social Media: </label>
-        <br></br>
-        <input id="socialmediatwo" type="text" onChange={handleTextChange} />
-        <br></br>
-        <label htmlFor="socialmediathree">Third Social Media: </label>
-        <br></br>
-        <input id="socialmediathree" type="text" onChange={handleTextChange} />
-        <br></br>
-        <label htmlFor="status">Currently Looking for Duo? </label>
-        <input id="status" type="checkbox" onChange={handleCheckbox} />
-        <br></br>
+
         <input className="submit-new" type="submit" value="Submit" />
       </form>
       <button className="back">Back</button>

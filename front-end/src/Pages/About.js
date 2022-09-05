@@ -3,7 +3,9 @@ import React from "react";
 export default function () {
   return (
     <div>
-      <h2>About Party Up!</h2>
+      <header>
+        <h2>About Party Up!</h2>
+      </header>
       <section>
         <p>
           Party Up! was created as a match-making site to bring gamers together.

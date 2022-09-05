@@ -2,8 +2,10 @@ import NewGamer from "../Components/NewGamer";
 
 export default function () {
   return (
-    <div>
-      <h2>Create Your Profile!</h2>
+    <div className="new-page">
+      <header>
+        <h2>Create Your Profile!</h2>
+      </header>
       <NewGamer />
     </div>
   );

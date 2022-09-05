@@ -1,34 +1,65 @@
 h2 {
   text-align: center;
-  color: #CDDBF9;
+}
+
+.logo-wrapper span {
+  display: flex;
+  margin: 4px 3px 3px 10px;
+}
+
+.logo-wrapper h3 {
+  font-family: fantasy;
+  color: white;
+}
+
+.home-page img {
+  width: 40%;
+  height: auto;
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   text-align: center;
+  background-color: #380604;
 }
 
 nav a {
-  /* color: #ECDDD0; */
-  color: #CDDBF9;
+  color: #FDB1CC;
   text-decoration: none;
-  font-family: monospace;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+nav img {
+  height: 50px;
+  width: 75px;
+}
+
+header {
+  color: #FDB1CC;
+}
+
 input {
   height: 35px;
   width: 300px;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   background-color: white;
   border: 1px solid black;
   border-radius: 4px;
   box-shadow: none;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+}
+
+label {
+  height: 35px;
+}
 
 #login-wrapper {
   display: flex;
@@ -53,7 +84,7 @@ input {
   margin-right: 5px;
 }
 
-#sign-in span{
+#sign-in span {
   font-size: large;
 }
 
@@ -78,9 +109,10 @@ input {
 
 .gamer-card {
   /* background-color: #B1B5ED; */
-  background-color: #8176C3;
+  background-color: #ED6D72;
+  /* background-color: #CB83A0; */
   width: 25em;
-  height: 10em;
+  height: 11em;
   text-align: center;
   overflow-y: auto;
   border: 1px solid black;
@@ -138,6 +170,9 @@ input {
 
 .gamer-details {
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
 }
 
 .gamer-details #back-button {
@@ -146,10 +181,16 @@ input {
   left: 15%;
 }
 
+.gamer-details section {
+  text-align: center;
+  justify-content: center;
+}
 
 .gamer-image img {
+  position: relative;
   display: flex;
-  left: 10%;
+  max-width:60%;
+  height:auto;
 }
 
 .showNavigation {
@@ -157,22 +198,48 @@ input {
   grid-template-columns: repeat(8, 1fr);
 }
 
-.new-gamer {
-  position: relative;
-  overflow-y: scroll;
-  color: white;
-  left: 20%;
+.new-page {
+  text-align: center;
 }
 
-.new-gamer input, .new-gamer textarea, .new-gamer select {
-  /* position: relative; */
-  /* left: 10%; */
+.new-gamer {
+  width: 5em;
+  position: relative;
+  left: 30%;
+  overflow-y: scroll;
+  width: 500px;
+  color: white;
+}
+
+.new-gamer span {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+ 
+.new-gamer select {
+  width: 300px;
+}
+
+.new-gamer textarea{
+  width: 295px;
+}
+
+.submit-new {
+  background-color: #7F76BE;
+  width: 200px;
+  float: right;
+}
+
+/* .new-gamer input, .new-gamer textarea, .new-gamer select {
+  position: relative;
+  left: 10%;
+  float: right;
   display: inline-block;
   margin: 10px;
 
-} 
+}  */
 
-new-gamer input[type=checkbox] {
+.new-gamer input[type=checkbox] {
   height: 20px;
   width: 20px;
 }

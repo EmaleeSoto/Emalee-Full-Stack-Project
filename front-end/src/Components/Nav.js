@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import controller from "../assets/partyup_controller.png";
 
 export default function Nav() {
   return (
     <nav>
+      <div className="logo-wrapper">
+        <span>
+          <img src={controller} alt="controller" />
+          <h3>Party Up!</h3>
+        </span>
+      </div>
       <div>
         <Link to="/">
           <h3>Home</h3>
