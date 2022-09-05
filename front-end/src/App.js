@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+
 import Nav from "./Components/Nav";
 import Index from "./Pages/Index";
 import Show from "./Pages/Show";
@@ -10,12 +12,38 @@ import "./App.css";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 
+import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
+
 function App() {
+  const [loggedIn, setLogin] = useState(false);
+  const auth = getAuth();
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in.
+      setLogin(true);
+    } else {
+      // No user is signed in.
+      setLogin(false);
+    }
+  });
+
+  const signOutOfAccount = () => {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+        alert("You have signed out");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
   return (
     <div className="App">
       <Router>
         <header>
-          <Nav />
+          <Nav signOut={signOutOfAccount} loggedIn={loggedIn} />
         </header>
         <main>
           <Routes>
@@ -25,7 +53,7 @@ function App() {
             <Route path="/gamers/:id" element={<Show />} />
             <Route path="/newprofile" element={<New />} />
             <Route path="/gamers/:id/edit" element={<Edit />} />
-            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/sign-up" element={<SignUp setLogin={setLogin} />} />
             <Route path="/deleted-profile" element={<DeleteModal />} />
           </Routes>
         </main>

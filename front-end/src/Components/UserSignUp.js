@@ -1,43 +1,82 @@
-import React from "react";
 import { useState } from "react";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import app from "../firebase";
 
-export default function () {
+export default function SignUp({ setLogin }) {
   const [profile, setProfile] = useState({
-    username: "",
+    email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
+
+  const auth = getAuth(app);
 
   const handleTextChange = (event) => {
     setProfile({ ...profile, [event.target.id]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const signUp = () => {
+    createUserWithEmailAndPassword(auth, profile.email, profile.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user; //creates user
+        console.log(user);
+        alert("Account created!");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        // const errorMessage = error.message;
+        alert(errorCode);
+        // ..
+      });
   };
 
+  const signIn = () => {
+    signInWithEmailAndPassword(auth, profile.email, profile.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        alert("Success!");
+        navigate("/gamers");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        // const errorMessage = error.message;
+        console.log(errorCode);
+        alert(errorCode);
+      });
+  };
   return (
     <div className="sign-up-section">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username: </label>
-        <input
-          id="username"
-          type="text"
-          placeholder="Enter Username"
-          onChange={handleTextChange}
-          required
-        />
-        <br></br>
-        <label htmlFor="password">Password:</label>
-        <input
-          id="password"
-          type="text"
-          placeholder="Enter Password"
-          onChange={handleTextChange}
-          required
-        />
-        <br></br>
-        <input type="submit" />
-      </form>
+      <label htmlFor="username">Username: </label>
+      <input
+        id="email"
+        type="email"
+        placeholder="Enter Email"
+        onChange={handleTextChange}
+        required
+      />
+      <br></br>
+      <label htmlFor="password">Password:</label>
+      <input
+        id="password"
+        type="text"
+        placeholder="Enter Password"
+        onChange={handleTextChange}
+        required
+      />
+      <br></br>
+      <button onClick={signUp}>Create an Account</button>
+      <button onClick={signIn}>Log into your Account</button>
     </div>
   );
 }

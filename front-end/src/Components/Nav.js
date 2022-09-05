@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import controller from "../assets/partyup_controller.png";
 
-export default function Nav() {
+export default function Nav({ signOut, loggedIn }) {
   return (
     <nav>
       <div className="logo-wrapper">
@@ -30,18 +30,17 @@ export default function Nav() {
           <h3>About</h3>
         </Link>
       </div>
-      <div id="login-wrapper">
-        <Link to="/sign-in" id="sign-in">
-          <button>
-            <span>Log In</span>
-          </button>
-        </Link>
-        <Link to="/sign-up" id="sign-up">
-          <button>
-            <span>Sign Up</span>
-          </button>
-        </Link>
-      </div>
+      {loggedIn ? (
+        <button onClick={signOut}>Log Out</button>
+      ) : (
+        <div id="login-wrapper">
+          <Link to="/sign-up" id="sign-up">
+            <button>
+              <span>Login/Sign Up</span>
+            </button>
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }

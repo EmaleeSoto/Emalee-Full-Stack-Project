@@ -49,12 +49,13 @@ nav {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   text-align: center;
-  background-color: #380604; 
+  background-color: #ED6E72; 
   z-index: 101;
 }
 
 nav a {
-  color: #FDB1CC;
+  /* color: #FDB1CC; */
+  color: black;
   text-decoration: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -99,21 +100,6 @@ label {
   border-radius: 20px;
 }
 
-#login-wrapper button:hover {
-  cursor: pointer;
-  transform: scale(1.1); 
-}
-
-#sign-in {
-  box-sizing: border-box;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#sign-in span {
-  font-size: large;
-}
-
 #sign-up {
   box-sizing: border-box;
   margin-left: 5px;
@@ -121,12 +107,21 @@ label {
 }
 
 #sign-up button {
-  background-color: #CCDCF9;
+  color: #380604;
+  background-color: #FDB2CC;
 }
 
 #sign-up span{
   font-size: large;
 }
+
+#login-wrapper button:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  color: black;
+  background-color: red;
+}
+
 
 .sign-up-section {
   text-align: center;
