@@ -4,8 +4,8 @@ This is an app that let's you find friends with similar gaming interests to conn
 
 ## Important Links
 
-- [Deployed API Server]()
-- [Deployed Frontend]()
+- [Deployed API Server](https://warm-earth-64986.herokuapp.com/)
+- [Deployed Frontend](https://partyup-duo.netlify.app/gamers)
 - [Trello Board](https://trello.com/b/qy8TW6ZC/full-stack-portfolio-project)
 - [Wireframes](https://wireframe.cc/HwjF3b)
 - [ERD](https://miro.com/app/board/uXjVPcZMGn8=/)
@@ -21,6 +21,7 @@ npm install the following depdencies:
 -axios
 -dotenv
 -aos --save (animation on scroll)
+-firebase
 
 ### Backend Setup
 

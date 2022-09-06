@@ -1,5 +1,5 @@
 import React from "react";
-//borrowed from Dan Rovito on GitHub
+//from Dan Rovito on GitHub
 
 export default function CountrySelectMenu({ handleSelectChange }) {
   return (

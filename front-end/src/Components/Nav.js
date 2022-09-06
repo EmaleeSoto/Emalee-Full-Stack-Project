@@ -21,14 +21,12 @@ export default function Nav({ signOut, loggedIn }) {
         </Link>
       </div>
 
-      {loggedIn ? (
+      {loggedIn && (
         <div className="tab">
           <Link to="/newprofile">
             <h3>Create A Profile</h3>
           </Link>
         </div>
-      ) : (
-        ""
       )}
 
       <div className="tab">

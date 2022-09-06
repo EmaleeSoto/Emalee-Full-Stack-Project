@@ -31,7 +31,7 @@ export default function EditGamer() {
         setGamer(response.data.payload);
       })
       .catch((err) => {
-        // navigate("/not-found");
+        navigate("/not-found");
       });
   }, [id, navigate]);
 
@@ -49,7 +49,7 @@ export default function EditGamer() {
   const handleTextChange = (event) => {
     setGamer({ ...gamer, [event.target.id]: event.target.value });
   };
-  const handleCheckbox = (event) => {
+  const handleCheckbox = () => {
     setGamer({ ...gamer, status: !gamer.status });
   };
 
@@ -69,6 +69,7 @@ export default function EditGamer() {
             onChange={handleTextChange}
             value={gamer.gamertag}
             maxLength="20"
+            required
           />
         </span>
         <br></br>
@@ -103,6 +104,7 @@ export default function EditGamer() {
             type="text"
             onChange={handleTextChange}
             value={gamer.game}
+            required
           />
         </span>
         <br></br>

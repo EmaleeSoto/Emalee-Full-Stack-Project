@@ -25,7 +25,7 @@ function GamerDetails({ loggedIn }) {
   const deleteGamer = () => {
     axios
       .delete(`${API}/gamers/${id}`)
-      .then((navigate) => {})
+      .then(() => {})
       .catch(() => {
         console.warn("error");
       });
@@ -68,12 +68,9 @@ function GamerDetails({ loggedIn }) {
         <h3>Plays {gamer.game}</h3>
         <h5> - {gamer.rank} - </h5>
         <h4>{`Based In: ${gamer.country}`}</h4>
-
         <h4 id="about-title">About Me: </h4>
         <p className="about-info">{gamer.about}</p>
         <h5>{gamer.status ? "Actively Looking 🟢" : "Not Available 🔴"}</h5>
-        {console.log(loggedIn)}
-
         <div className="showNavigation" id={loggedIn ? "show" : "hide"}>
           <Link to={`/gamers/${gamer.id}/edit`} id="edit-button">
             <button>Edit</button>

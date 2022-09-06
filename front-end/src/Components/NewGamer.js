@@ -57,6 +57,7 @@ export default function NewGamer() {
             type="text"
             onChange={handleTextChange}
             maxLength="20"
+            required
           />
         </span>
         <br></br>
@@ -83,7 +84,7 @@ export default function NewGamer() {
         <span>
           <label htmlFor="game">Game of Choice: </label>
 
-          <input id="game" type="text" onChange={handleTextChange} />
+          <input id="game" type="text" onChange={handleTextChange} required />
         </span>
         <br></br>
 

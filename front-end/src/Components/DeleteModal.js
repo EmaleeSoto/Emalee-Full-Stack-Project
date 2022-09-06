@@ -6,8 +6,9 @@ import "./DeleteModal.css";
 /**
  * Modal Window that displays an error message
  * @params navigate - useNavigate()
- * @returns Error Message in Modal Window View
+ * @returns Delete Message in Modal Window View
  */
+
 const DeleteModal = () => {
   const [display, setDisplay] = useState(true);
   const navigate = useNavigate();

@@ -22,7 +22,7 @@ export default function Gamers() {
 
   const searchFor = (gamers, search) => {
     const formatSearch = search.toLowerCase();
-    const newGamers =
+    const filteredGamers =
       formatSearch === undefined || formatSearch === ""
         ? gamers
         : gamers.filter((gamer) => {
@@ -32,7 +32,7 @@ export default function Gamers() {
               gamer.rank.toLowerCase().includes(formatSearch)
             );
           });
-    setSearchedGamers(newGamers);
+    setSearchedGamers(filteredGamers);
   };
 
   return (

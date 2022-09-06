@@ -21,7 +21,7 @@ const getGamer = async (id) => {
 // CREATE
 const createGamer = async (gamer) => {
   try {
-    if (!gamer.image || gamer.image === "") {
+    if (!gamer.image || gamer.image === "" || gamer.image === undefined) {
       gamer.image =
         "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
     }
