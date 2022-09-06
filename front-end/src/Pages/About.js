@@ -61,6 +61,22 @@ export default function About() {
           community, and I hope to bring people together in this community
           through my app. I hope you enjoy!
         </p>
+        <section className="links" data-aos="fade-up">
+          <a href="https://github.com/EmaleeSoto" target="_blank">
+            GitHub
+            <img
+              src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
+              alt="github"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/emalee-soto/" target="_blank">
+            LinkedIn
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+              alt="github"
+            />
+          </a>
+        </section>
       </section>
     </div>
   );
