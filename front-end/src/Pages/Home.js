@@ -5,8 +5,7 @@ import HomeScroll from "../Components/HomeScroll";
 export default function Home() {
   return (
     <div className="Home">
-      <h1>Party Up!</h1>
-      <img src={controller} alt="controller" />
+      <h1 className="title">Party Up!</h1>
       <section>
         <HomeScroll />
       </section>

@@ -16,8 +16,15 @@ If you'd like to run my project locally, please read the following steps:
 
 ### Frontend Setup
 
-_Section in progress_
+npm install the following depdencies:
+-react-router-dom
+-axios
+-dotenv
 
 ### Backend Setup
 
-_Section in progess_
+npm install the following dependencies:
+-express
+-pg-promise
+-cors
+-dotenv

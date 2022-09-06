@@ -3,7 +3,7 @@ import React from "react";
 export default function About() {
   return (
     <div className="About">
-      <h2>About Party Up!</h2>
+      <h2 className="title">About Party Up!</h2>
       <section>
         <p>
           Party Up! was created as a match-making site to bring gamers together.
@@ -26,7 +26,7 @@ export default function About() {
           two of you can take on any gaming world together.
         </p>
       </section>
-      <h2>Meet Our Dev</h2>
+      <h2 className="title">Meet Our Dev</h2>
       <section>
         <p>
           Nice to meet you, I'm Emalee Soto, the dev behind Party Up! I'm a

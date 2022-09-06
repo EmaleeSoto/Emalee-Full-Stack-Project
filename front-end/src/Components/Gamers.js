@@ -40,7 +40,7 @@ export default function Gamers() {
       <SearchBar gamers={gamers} searchFor={searchFor} />
       <div className="gamer-wrapper">
         {searchedGamers.map((gamer) => {
-          return <Gamer gamer={gamer} />;
+          return <Gamer key={gamer.id} gamer={gamer} />;
         })}
       </div>
     </div>

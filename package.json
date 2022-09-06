@@ -10,6 +10,8 @@
   "author": "Emalee Soto",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^9.9.4"
+    "animate.css": "^4.1.1",
+    "firebase": "^9.9.4",
+    "react-animation-on-scroll": "^5.1.0"
   }
 }

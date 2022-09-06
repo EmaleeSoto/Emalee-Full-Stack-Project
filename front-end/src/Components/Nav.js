@@ -26,7 +26,7 @@ export default function Nav({ signOut, loggedIn }) {
         </Link>
       </div>
       <div>
-        <Link to="/about">
+        <Link to="/about" id="about">
           <h3>About</h3>
         </Link>
       </div>

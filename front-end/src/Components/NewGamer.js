@@ -48,7 +48,7 @@ export default function NewGamer() {
 
   return (
     <div>
-      <form className="new-gamer" onSubmit={handleSubmit}>
+      <form className="gamer-form" onSubmit={handleSubmit}>
         <span>
           <label htmlFor="gamertag">Gamertag: </label>
           <input

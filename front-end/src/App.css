@@ -1,4 +1,227 @@
-h2 {
+nav {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  text-align: center;
+  background-color: #0F0F0F; 
+  z-index: 101;
+  color: #BD110F;
+}
+
+nav span {
+  font-family: fantasy;
+}
+
+nav a {
+  color: pink;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  float: right;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+nav button {
+  grid-column: 8;
+  color: #380604;
+  background-color: #F094A4;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  margin-top: 3%;
+}
+
+nav #login-wrapper {
+  margin-top: 4%;
+  grid-column: 8;
+  text-align: center;
+}
+
+nav #login-wrapper a {
+  float: none;
+}
+
+nav #login-wrapper span {
+  font-family: monospace;
+  font-style: oblique;
+}
+
+nav #about {
+  float: none;
+}
+
+nav button:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  color: red;
+  background-color: black;
+}
+
+nav img {
+  height: 40px;
+  width: auto;
+  float: left;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+
+.gamer-card {
+  background-color: #EBA3B0;
+  width: 25em;
+  height: 15em;
+  text-align: center;
+  overflow-y: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.gamer-card a {
+  color: #F4DCDC;
+  text-decoration: none;
+}
+
+.gamer-card:hover {
+  border: 1px solid white;
+}
+
+.gamer-card h2 {
+  color: #F4DCDC;
+  display: inline;
+}
+
+.gamer-card #pronouns {
+  margin: -1px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+.gamer-card #tagline {
+  margin-top: 15%;
+  text-align: center;
+  font-weight: 600;
+}
+
+#status {
+  display: inline;
+}
+
+.Index {
+  text-align: center;
+}
+
+.Index section input {
+  border-radius: 5px;
+  height: 25px;
+  width: 300px;
+}
+
+.Index section {
+  color: #FFC0CB;
+  font-weight: 700;
+}
+
+.title {
+  color: #FFC0CB;
+}
+
+.search-bar {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.gamer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  margin-top: 1em;
+}
+
+.gamer-card img {
+  float: left;
+  width:  150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.Home section h2 {
+  color: #FFC0CB;
+  font-weight: 300;
+}
+
+.Home img {
+  height: 400px;
+  width: auto;
+  float: right;
+  margin-right: 100px;
+}
+
+.New {
+  text-align: center;
+}
+
+.Edit {
+  text-align: center;
+}
+
+.Show {
+  color: #F4DCDC;
+}
+
+.gamer-form {
+  width: 5em;
+  margin-top: 3%;
+  position: relative;
+  left: 30%;
+  overflow-y: scroll;
+  width: 500px;
+  color: #FFC0CB;
+  font-weight: bold;
+}
+
+.gamer-form label {
+  text-align: center;
+}
+
+.gamer-form span {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+ 
+.gamer-form select {
+  width: 250px;
+}
+
+.gamer-form textarea{
+  width: 250px;
+}
+
+.submit-new {
+  position: relative;
+  right: 5%;
+  background-color: #FFC0CB;
+  border: none;
+  width: 200px;
+  float: right;
+}
+
+.gamer-form input[type=checkbox] {
+  height: 20px;
+  width: 20px;
+}
+
+
+
+/* h2 {
   text-align: center;
 }
 
@@ -18,24 +241,29 @@ header {
 
 .Home h1 {
   font-size: 500%;
+  position: relative;
+  left: 20%;
 }
 
 .Home img {
+
+}
+
+#controller {
   width: 40%;
   height: auto;
   float: right;
 }
 
+#guy-girl {
+  width: 20%;
+  height: auto;
+  position: relative;
+  left: 20%;
+}
+
 .Home section {
   margin-top: 5%;
-}
-
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
 }
 
 .About h2, .Show h2, .New h2, .SignUp h2 {
@@ -45,17 +273,16 @@ header {
 nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: auto;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   text-align: center;
-  background-color: #ED6E72; 
+  background-color: #370305; 
   z-index: 101;
 }
 
 nav a {
-  /* color: #FDB1CC; */
-  color: black;
+  color: pink;
   text-decoration: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -76,7 +303,6 @@ header {
 input {
   height: 35px;
   width: 300px;
-  /* padding: 5px 10px; */
   background-color: white;
   border: 1px solid black;
   border-radius: 4px;
@@ -108,18 +334,16 @@ label {
 
 #sign-up button {
   color: #380604;
-  background-color: #FDB2CC;
+  background-color: #F9C2B6;
+  border: none;
 }
 
-#sign-up span{
-  font-size: large;
-}
 
 #login-wrapper button:hover {
   cursor: pointer;
   transform: scale(1.1); 
-  color: black;
-  background-color: red;
+  color: red;
+  background-color: black;
 }
 
 
@@ -145,7 +369,6 @@ label {
 
 
 .gamer-card a {
-  /* color: #CCDCF9; */
   color: #F4D3D4;
   text-decoration: none;
 }
@@ -155,8 +378,6 @@ label {
 }
 
 .gamer-card h2 {
-  /* color: #D788CC; */
-  /* color: #CCDCF9; */
   color: #F4D3D4;
   display: inline;
 }
@@ -191,13 +412,14 @@ label {
   text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 5%;
   padding: 20px;
 }
 
 .gamer-details #back-button {
   position: fixed;
-  top: 7%;
-  left: 15%;
+  top: 10%;
+  left: 10%;
 }
 
 .gamer-details section {
@@ -221,7 +443,7 @@ label {
   text-align: center;
 }
 
-.new-gamer {
+.gamer-form {
   width: 5em;
   position: relative;
   left: 30%;
@@ -230,16 +452,20 @@ label {
   color: white;
 }
 
-.new-gamer span {
+.gamer-form label {
+  text-align: center;
+}
+
+.gamer-form span {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
  
-.new-gamer select {
+.gamer-form select {
   width: 300px;
 }
 
-.new-gamer textarea{
+.gamer-form textarea{
   width: 295px;
 }
 
@@ -249,9 +475,28 @@ label {
   float: right;
 }
 
-.new-gamer input[type=checkbox] {
+.gamer-form input[type=checkbox] {
   height: 20px;
   width: 20px;
+}
+
+
+@media (max-width: 1349px) {
+  nav {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1150px) {
+  nav span h3{
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  nav span h3{
+    display: none;
+  }
 }
 
 
@@ -264,4 +509,4 @@ label {
   to {
     transform: rotate(360deg);
   }
-} */
+} */ 
