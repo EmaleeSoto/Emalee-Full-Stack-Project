@@ -459,6 +459,12 @@ input[type=submit]:hover {
       transform:rotate(360deg);
   }
 }
+@media (max-width: 1600px) {
+  .gamer-image {
+    width: 25em;
+  }
+}
+
 
   @media (max-width: 1360px) {
     .gamer-wrapper {
