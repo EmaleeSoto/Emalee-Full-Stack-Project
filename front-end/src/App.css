@@ -178,6 +178,7 @@ nav img:hover {
   left: 20%;
   margin-top: 2%;
   font-size: xxx-large;
+  width: 17em;
 }
 
 .Home section h2 {
@@ -487,9 +488,15 @@ input[type=submit]:hover {
     .About  p{
       width: 20em;
     }
+    .Home .title {
+      width: 14em;
+    }
   }
 
   @media (max-width: 900px) {
+    .Home .title {
+     width: 11em;
+    }
     .form-wrapper {
       width: 10em;
     }
@@ -506,6 +513,9 @@ input[type=submit]:hover {
   @media (max-width: 715px) {
     .About  p{
       width: 15em;
+    }
+    .Home .title {
+      width: 9em;
     }
     .New {
       margin-top: 100px;
@@ -539,6 +549,9 @@ input[type=submit]:hover {
     .About  p{
       width: 10em;
     }
+    .Home .title {
+      width: 7em;
+    }
     .About img {
       width: 200px;
       height: auto;
@@ -561,10 +574,15 @@ input[type=submit]:hover {
       width: 15em;
       height: max-content;
     }
+    
+  }
 
 @media (max-width: 380px) {
   .About  p{
     width: 7em;
+  }
+  .Home .title {
+    width: 5em;
   }
   .gamer-image {
     width: 12em;
@@ -584,5 +602,3 @@ input[type=submit]:hover {
     grid-template-columns: 1fr;
   }
 }
-
-  }
