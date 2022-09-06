@@ -32,8 +32,10 @@ export default function SignUp({ setLogin }) {
       })
       .catch((error) => {
         const errorCode = error.code;
-        // const errorMessage = error.message;
-        alert(errorCode);
+
+        alert(
+          `${errorCode} - Please ensure you are entering a valid email address and password`
+        );
         // ..
       });
   };

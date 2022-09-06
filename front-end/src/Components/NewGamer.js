@@ -56,6 +56,7 @@ export default function NewGamer() {
             id="gamertag"
             type="text"
             onChange={handleTextChange}
+            placeholder="Max 20 characters"
             maxLength="20"
             required
           />
@@ -65,7 +66,13 @@ export default function NewGamer() {
         <span>
           <label htmlFor="pronouns">Pronouns: </label>
 
-          <input id="pronouns" type="text" onChange={handleTextChange} />
+          <input
+            id="pronouns"
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Max 20 characters"
+            maxLength="20"
+          />
         </span>
         <br></br>
 
@@ -76,6 +83,7 @@ export default function NewGamer() {
             id="tagline"
             type="text"
             onChange={handleTextChange}
+            placeholder="Max 100 characters"
             maxLength="100"
           />
         </span>
@@ -84,21 +92,40 @@ export default function NewGamer() {
         <span>
           <label htmlFor="game">Game of Choice: </label>
 
-          <input id="game" type="text" onChange={handleTextChange} required />
+          <input
+            id="game"
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Max 30 characters"
+            maxLength="30 characters"
+            required
+          />
         </span>
         <br></br>
 
         <span>
           <label htmlFor="rank">Rank: </label>
 
-          <input id="rank" type="text" onChange={handleTextChange} />
+          <input
+            id="rank"
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Max 15 characters"
+            maxLength="15 characters"
+          />
         </span>
         <br></br>
 
         <span>
           <label htmlFor="role">Role: </label>
 
-          <input id="role" type="text" onChange={handleTextChange} />
+          <input
+            id="role"
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Max 15 characters"
+            maxLength="15 characters"
+          />
         </span>
         <br></br>
 
@@ -132,6 +159,7 @@ export default function NewGamer() {
             onChange={handleTextChange}
             rows="6"
             cols="50"
+            placeholder="Max 300 characters"
             maxLength="300"
           />
         </span>
@@ -139,13 +167,25 @@ export default function NewGamer() {
 
         <span>
           <label htmlFor="socialmediaone">First Social Media: </label>
-          <input id="socialmediaone" type="text" onChange={handleTextChange} />
+          <input
+            id="socialmediaone"
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Max 15 characters"
+            maxLength="15 characters"
+          />
         </span>
         <br></br>
 
         <span>
           <label htmlFor="socialmediatwo">Second Social Media: </label>
-          <input id="socialmediatwo" type="text" onChange={handleTextChange} />
+          <input
+            id="socialmediatwo"
+            type="text"
+            onChange={handleTextChange}
+            placeholder="Max 15 characters"
+            maxLength="15 characters"
+          />
         </span>
         <br></br>
 
@@ -155,6 +195,8 @@ export default function NewGamer() {
             id="socialmediathree"
             type="text"
             onChange={handleTextChange}
+            placeholder="Max 15 characters"
+            maxLength="15 characters"
           />
         </span>
         <br></br>
