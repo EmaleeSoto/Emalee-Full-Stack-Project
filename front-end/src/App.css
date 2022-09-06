@@ -90,7 +90,6 @@ nav img:hover {
   width: 25em;
   height: 15em;
   text-align: center;
-  overflow-y: auto;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px;
