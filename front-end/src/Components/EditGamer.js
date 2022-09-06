@@ -39,7 +39,7 @@ export default function EditGamer() {
     axios
       .put(`${API}/gamers/${id}`, gamer)
       .then(() => {
-        navigate(`/gamers`);
+        navigate(`/gamers/${id}`);
       })
       .catch((err) => {
         console.warn(err);
