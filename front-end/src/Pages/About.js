@@ -62,14 +62,22 @@ export default function About() {
           through my app. I hope you enjoy!
         </p>
         <section className="links" data-aos="fade-up">
-          <a href="https://github.com/EmaleeSoto" target="_blank">
+          <a
+            href="https://github.com/EmaleeSoto"
+            target="_blank"
+            rel="noreferrer"
+          >
             GitHub
             <img
               src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
               alt="github"
             />
           </a>
-          <a href="https://www.linkedin.com/in/emalee-soto/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/emalee-soto/"
+            target="_blank"
+            rel="noreferrer"
+          >
             LinkedIn
             <img
               src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
