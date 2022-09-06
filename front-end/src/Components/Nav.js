@@ -10,30 +10,38 @@ export default function Nav({ signOut, loggedIn }) {
           <h3>Party Up!</h3>
         </span>
       </div>
-      <div>
+      <div className="tab">
         <Link to="/">
           <h3>Home</h3>
         </Link>
       </div>
-      <div>
+      <div className="tab">
         <Link to="/gamers">
           <h3>Meet Our Gamers</h3>
         </Link>
       </div>
-      <div>
-        <Link to="/newprofile">
-          <h3>Create A Profile</h3>
-        </Link>
-      </div>
-      <div>
+
+      {loggedIn ? (
+        <div className="tab">
+          <Link to="/newprofile">
+            <h3>Create A Profile</h3>
+          </Link>
+        </div>
+      ) : (
+        ""
+      )}
+
+      <div className="tab">
         <Link to="/about" id="about">
           <h3>About</h3>
         </Link>
       </div>
       {loggedIn ? (
-        <button onClick={signOut}>Log Out</button>
+        <button className="tab" onClick={signOut}>
+          Log Out
+        </button>
       ) : (
-        <div id="login-wrapper">
+        <div className="tab" id="login-wrapper">
           <Link to="/sign-up" id="sign-up">
             <button>
               <span>Login/Sign Up</span>

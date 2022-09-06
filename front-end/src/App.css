@@ -55,7 +55,6 @@ nav #about {
 
 nav button:hover {
   cursor: pointer;
-  transform: scale(1.1); 
   color: red;
   background-color: black;
 }
@@ -64,10 +63,27 @@ nav img {
   height: 40px;
   width: auto;
   float: left;
-  margin-top: 2%;
-  margin-left: 2%;
+  transition: all .2s ease-in-out; 
+  margin-top: 5%;
+  margin-left: 10%;
 }
 
+nav img:hover {
+  cursor: grab;
+  transform: scale(1.1); 
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+.fadein {
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 3s; /* Firefox < 16 */
+   -ms-animation: fadein 3s; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+       animation: fadein 3s;
+}
 
 .gamer-card {
   background-color: #EBA3B0;
@@ -86,7 +102,7 @@ nav img {
 
 
 .gamer-card a {
-  color: #F4DCDC;
+  color: #F8E8E8;
   text-decoration: none;
 }
 
@@ -95,7 +111,7 @@ nav img {
 }
 
 .gamer-card h2 {
-  color: #F4DCDC;
+  color: #F8E8E8;
   display: inline;
 }
 
@@ -177,6 +193,34 @@ nav img {
   color: #F4DCDC;
 }
 
+.About {
+  text-align: center;
+  margin: 20px;
+  color: #FFC0CB;
+}
+
+.About section {
+  text-align: center;
+  padding: 30px;
+}
+
+.About p {
+  width: 40em;
+  padding: 30px;
+  margin: 0 auto;
+  font-size: x-large;
+}
+
+.About .title {
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.NotFound {
+  text-align: center;
+}
+
 .gamer-form {
   width: 5em;
   margin-top: 3%;
@@ -219,294 +263,297 @@ nav img {
   width: 20px;
 }
 
-
-
-/* h2 {
-  text-align: center;
-}
-
-header {
-  margin-bottom: 5%;
-}
-
-.logo-wrapper span {
-  display: flex;
-  margin: 4px 3px 3px 10px;
-}
-
-.logo-wrapper h3 {
-  font-family: fantasy;
-  color: white;
-}
-
-.Home h1 {
-  font-size: 500%;
-  position: relative;
-  left: 20%;
-}
-
-.Home img {
-
-}
-
-#controller {
-  width: 40%;
+.gamer-image img {
+  padding: 10px;
+  border-radius: 30px;
+  max-width: 500px;
   height: auto;
-  float: right;
 }
 
-#guy-girl {
-  width: 20%;
-  height: auto;
-  position: relative;
-  left: 20%;
-}
-
-.Home section {
-  margin-top: 5%;
-}
-
-.About h2, .Show h2, .New h2, .SignUp h2 {
+.gamer-image {
+  width: 770px;
+  grid-column: 1 / 2;
+  margin: 2%;
+  background-color: pink;
+  border-radius: 15px;
   color: #380604;
+  text-align: center;
+  font-size: x-large;
 }
 
-nav {
-  position: fixed;
-  top: 0;
+.gamer-image #partyup_girl, .gamer-image #partyup_boy {
+  height: 100px;
   width: auto;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  text-align: center;
-  background-color: #370305; 
-  z-index: 101;
-}
-
-nav a {
-  color: pink;
-  text-decoration: none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-nav img {
-  height: 50px;
-  width: 75px;
-}
-
-header {
-  color: #FDB1CC;
-}
-
-input {
-  height: 35px;
-  width: 300px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box;
-}
-
-label {
-  height: 35px;
-}
-
-#login-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-column: 8;
-}
-
-#login-wrapper button {
-  padding: 6px;
-  border-radius: 20px;
-}
-
-#sign-up {
-  box-sizing: border-box;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#sign-up button {
-  color: #380604;
-  background-color: #F9C2B6;
-  border: none;
-}
-
-
-#login-wrapper button:hover {
-  cursor: pointer;
-  transform: scale(1.1); 
-  color: red;
-  background-color: black;
-}
-
-
-.sign-up-section {
-  text-align: center;
-  margin-top: 10%;
-}
-
-.gamer-card {
-  background-color: #ED6D72;
-  width: 25em;
-  height: 11em;
-  text-align: center;
-  overflow-y: auto;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
-.gamer-card a {
-  color: #F4D3D4;
-  text-decoration: none;
-}
-
-.gamer-card:hover {
-  border: 1px solid white;
-}
-
-.gamer-card h2 {
-  color: #F4D3D4;
   display: inline;
 }
 
-#status {
-  display: inline;
+#gamertag {
+  margin-bottom: -1px;
 }
 
-.Index {
-  text-align: center;
-}
-
-.search-bar {
-  margin-bottom: 3%;
-}
-
-.gamer-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  margin-top: 1em;
-}
-
-.gamer-card img {
-  float: left;
-  width:  150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
+#age {
+  margin: -1px;
 }
 
 .gamer-details {
-  text-align: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 5%;
-  padding: 20px;
-}
-
-.gamer-details #back-button {
-  position: fixed;
-  top: 10%;
-  left: 10%;
-}
-
-.gamer-details section {
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
-  justify-content: center;
+  font-size: x-large;
+  padding: 10px;
 }
 
-.gamer-image img {
+.gamer-info {
+  text-align: center;
+}
+
+.about-info {
+  text-align: center;
+}
+
+#about-title {
+  margin-bottom: -1px;
+}
+
+.like-user {
   position: relative;
-  display: flex;
-  max-width:60%;
-  height:auto;
+  display: inline;
+  text-align: center;
+}
+
+.like-user h4 {
+  display: inline;
 }
 
 .showNavigation {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  margin-top: 300px;
+  display: block;
 }
 
-.New {
-  text-align: center;
+.showNavigation button {
+  background-color: #FCBEC9;
+  color: #0F0F0F;
+  font-size: large;
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  height: 50px;
+  width: 100px;
 }
 
-.gamer-form {
-  width: 5em;
-  position: relative;
-  left: 30%;
-  overflow-y: scroll;
-  width: 500px;
-  color: white;
+.showNavigation a {
+  float: left;
 }
 
-.gamer-form label {
-  text-align: center;
-}
-
-.gamer-form span {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
- 
-.gamer-form select {
-  width: 300px;
-}
-
-.gamer-form textarea{
-  width: 295px;
-}
-
-.submit-new {
-  background-color: #7F76BE;
-  width: 200px;
+.showNavigation div {
   float: right;
 }
 
-.gamer-form input[type=checkbox] {
-  height: 20px;
-  width: 20px;
+.showNavigation a, .showNavigation div {
+  margin: 10px;
+  display: inline;
+}
+
+.showNavigation button:hover {
+  background-color: #0F0F0F;
+  border: 1px solid;
+  color: #FCBEC9;
+  cursor: pointer;
+}
+
+#like-button {
+  display: inline;
+  background: none;
+  border: none;
+  font-size: xxx-large;
+}
+
+#like-button:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  animation: pulse 1.5s;
+}
+
+.back button {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  height: 30px;
+  border: 1px solid #C3939C;
+  border-radius: 15px;
+  background-color: #FFC0CB;
+  font-size: large;
+  color: #0F0F0F;
+}
+
+.back button:hover {
+  cursor: pointer;
+  background-color: #000000;
+  border: black;
+  color: #FF0A00;
+}
+
+input[type=submit] {
+  height: 25px;
+}
+input[type=submit]:hover {
+  border: 1px solid #FF0A00;
+  cursor: pointer;
+}
+
+.sign-up-section {
+  text-align: center;
+  margin-top: 3%;
+  overflow-y: scroll;
+  color: #FFC0CB;
+  font-weight: bold;
+}
+
+.sign-up-section input {
+  margin: 30px;
+  width: 150px;
+}
+
+.sign-up-section button {
+  margin: 20px;
+  border-radius: 20px;
+  border: thin solid black;
+  background-color: #FFC0CB;
+  height: 30px;
+}
+
+.sign-up-section button:hover {
+  cursor: pointer;
+  border: thin solid white;
 }
 
 
-@media (max-width: 1349px) {
-  nav {
-    grid-template-columns: repeat(5, 1fr);
+#hide {
+  display: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(.85);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+  }
+    100% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
   }
 }
 
-@media (max-width: 1150px) {
-  nav span h3{
-    display: none;
-  }
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@media (max-width: 760px) {
-  nav span h3{
-    display: none;
-  }
-}
-
-
-
-
-/* @keyframes App-logo-spin {
+@keyframes spin {
   from {
-    transform: rotate(0deg);
+      transform:rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform:rotate(360deg);
   }
-} */ 
+}
+
+  @media (max-width: 1360px) {
+    .gamer-wrapper {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  }
+
+  @media (max-width: 1050px) {
+    .About  p{
+      width: 20em;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .form-wrapper {
+      width: 10em;
+    }
+
+    #guy-girl {
+      width: 50%;
+      height: auto;
+    }
+    .gamer-wrapper {
+      grid-template-columns: 1fr
+    }
+  }
+
+  @media (max-width: 715px) {
+    .New {
+      margin-top: 100px;
+    }
+    .gamer-form {
+      width: 25em;
+    }
+    nav {
+      overflow-x: scroll;
+    }
+    .gamer-image {
+      width: 20em;
+      height: max-content;
+    }
+    .gamer-image img {
+      width: 10em;
+      height: auto;
+    }
+    .gamer-details {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr;
+    }
+    .gamer-details section {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 540px) {
+    .gamer-form {
+      width: 18em;
+    }
+    .Index section input {
+      width: 200px;
+    }
+    .gamer-card {
+      width: 20em;
+    }
+    .gamer-wrapper img {
+      width:  100px;
+      height: 100px;
+    }
+
+    .gamer-image {
+      width: 15em;
+      height: max-content;
+    }
+
+@media (max-width: 380px) {
+
+  .gamer-image {
+    width: 12em;
+    height: max-content;
+  }
+  .gamer-image section {
+    font-size: small;
+  }
+  .gamer-image img {
+    width: 10em;
+    height: auto;
+  }
+  .gamer-details {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+}
+
+  }

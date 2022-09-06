@@ -3,6 +3,7 @@ import CountrySelectMenu from "./CountrySelectMenu";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
 export default function NewGamer() {
@@ -47,7 +48,7 @@ export default function NewGamer() {
   };
 
   return (
-    <div>
+    <div className="form-wrapper">
       <form className="gamer-form" onSubmit={handleSubmit}>
         <span>
           <label htmlFor="gamertag">Gamertag: </label>
@@ -165,7 +166,9 @@ export default function NewGamer() {
 
         <input className="submit-new" type="submit" value="Submit" />
       </form>
-      <button className="back">Back</button>
+      <Link className="back" to={`/gamers`}>
+        <button>Never Mind!</button>
+      </Link>
     </div>
   );
 }

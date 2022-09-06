@@ -75,8 +75,12 @@ export default function SignUp({ setLogin }) {
         required
       />
       <br></br>
-      <button onClick={signUp}>Create an Account</button>
-      <button onClick={signIn}>Log into your Account</button>
+      <button id="create" onClick={signUp}>
+        Create an Account
+      </button>
+      <button id="login" onClick={signIn}>
+        Log into your Account
+      </button>
     </div>
   );
 }

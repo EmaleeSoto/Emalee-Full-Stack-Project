@@ -13,6 +13,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   const [loggedIn, setLogin] = useState(false);
@@ -50,11 +51,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/gamers" element={<Index />} />
-            <Route path="/gamers/:id" element={<Show />} />
+            <Route path="/gamers/:id" element={<Show loggedIn={loggedIn} />} />
             <Route path="/newprofile" element={<New />} />
             <Route path="/gamers/:id/edit" element={<Edit />} />
             <Route path="/sign-up" element={<SignUp setLogin={setLogin} />} />
             <Route path="/deleted-profile" element={<DeleteModal />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </Router>

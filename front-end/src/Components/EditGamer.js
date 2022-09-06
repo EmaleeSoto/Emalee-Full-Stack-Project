@@ -221,8 +221,8 @@ export default function EditGamer() {
 
         <input className="submit-new" type="submit" value="Submit" />
       </form>
-      <Link to={`/gamers/${id}`}>
-        <button className="back">{`Never Mind!`}</button>
+      <Link className="back" to={`/gamers/${id}`}>
+        <button>Never Mind!</button>
       </Link>
     </div>
   );

@@ -20,6 +20,7 @@ npm install the following depdencies:
 -react-router-dom
 -axios
 -dotenv
+-aos --save (animation on scroll)
 
 ### Backend Setup
 
