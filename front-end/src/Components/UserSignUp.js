@@ -63,15 +63,17 @@ export default function SignUp({ setLogin }) {
         type="email"
         placeholder="Enter Email"
         onChange={handleTextChange}
+        autoComplete="off"
         required
       />
       <br></br>
       <label htmlFor="password">Password:</label>
       <input
         id="password"
-        type="text"
+        type="password"
         placeholder="Enter Password"
         onChange={handleTextChange}
+        autoComplete="off"
         required
       />
       <br></br>
