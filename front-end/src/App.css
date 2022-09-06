@@ -169,6 +169,17 @@ nav img:hover {
   border-radius: 10px;
 }
 
+.Home section {
+  margin: 5%;
+}
+
+.Home .title {
+  position: relative;
+  left: 20%;
+  margin-top: 2%;
+  font-size: xxx-large;
+}
+
 .Home section h2 {
   color: #FFC0CB;
   font-weight: 300;
