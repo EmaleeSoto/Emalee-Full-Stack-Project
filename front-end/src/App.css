@@ -504,6 +504,9 @@ input[type=submit]:hover {
   }
 
   @media (max-width: 715px) {
+    .About  p{
+      width: 15em;
+    }
     .New {
       margin-top: 100px;
     }
@@ -533,6 +536,13 @@ input[type=submit]:hover {
   }
   
   @media (max-width: 540px) {
+    .About  p{
+      width: 10em;
+    }
+    .About img {
+      width: 200px;
+      height: auto;
+    }
     .gamer-form {
       width: 18em;
     }
@@ -553,7 +563,9 @@ input[type=submit]:hover {
     }
 
 @media (max-width: 380px) {
-
+  .About  p{
+    width: 7em;
+  }
   .gamer-image {
     width: 12em;
     height: max-content;
