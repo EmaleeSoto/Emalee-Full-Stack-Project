@@ -59,7 +59,7 @@ export default function SignUp({ setLogin }) {
   };
   return (
     <div className="sign-up-section">
-      <label htmlFor="username">Username: </label>
+      <label htmlFor="email">Email: </label>
       <input
         id="email"
         type="email"
