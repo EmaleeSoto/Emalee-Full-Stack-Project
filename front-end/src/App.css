@@ -326,6 +326,17 @@ nav img:hover {
   font-size: x-large;
 }
 
+.gamer-image a {
+  text-decoration: none;
+  color: #330A06;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.gamer-image a:hover {
+  color: white;
+}
+
 .gamer-info #partyup_girl, .gamer-info #partyup_boy {
   height: 100px;
   width: auto;

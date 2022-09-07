@@ -193,8 +193,6 @@ export default function EditGamer() {
             type="text"
             onChange={handleTextChange}
             value={gamer.socialmediaone}
-            placeholder="Max 15 characters"
-            maxLength="15 characters"
           />
         </span>
         <br></br>
@@ -206,8 +204,6 @@ export default function EditGamer() {
             type="text"
             onChange={handleTextChange}
             value={gamer.socialmediatwo}
-            placeholder="Max 15 characters"
-            maxLength="15 characters"
           />
         </span>
         <br></br>
@@ -219,8 +215,6 @@ export default function EditGamer() {
             type="text"
             onChange={handleTextChange}
             value={gamer.socialmediathree}
-            placeholder="Max 15 characters"
-            maxLength="15 characters"
           />
         </span>
         <br></br>

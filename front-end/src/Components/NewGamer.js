@@ -167,25 +167,13 @@ export default function NewGamer() {
 
         <span>
           <label htmlFor="socialmediaone">First Social Media: </label>
-          <input
-            id="socialmediaone"
-            type="text"
-            onChange={handleTextChange}
-            placeholder="Max 15 characters"
-            maxLength="15 characters"
-          />
+          <input id="socialmediaone" type="text" onChange={handleTextChange} />
         </span>
         <br></br>
 
         <span>
           <label htmlFor="socialmediatwo">Second Social Media: </label>
-          <input
-            id="socialmediatwo"
-            type="text"
-            onChange={handleTextChange}
-            placeholder="Max 15 characters"
-            maxLength="15 characters"
-          />
+          <input id="socialmediatwo" type="text" onChange={handleTextChange} />
         </span>
         <br></br>
 
@@ -195,8 +183,6 @@ export default function NewGamer() {
             id="socialmediathree"
             type="text"
             onChange={handleTextChange}
-            placeholder="Max 15 characters"
-            maxLength="15 characters"
           />
         </span>
         <br></br>

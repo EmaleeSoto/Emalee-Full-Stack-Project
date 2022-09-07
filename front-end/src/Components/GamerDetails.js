@@ -44,7 +44,7 @@ function GamerDetails({ loggedIn }) {
     }
   };
 
-  function displayIcon(gamer) {
+  const displayIcon = (gamer) => {
     if (gamer.pronouns === undefined) {
       return <h2>whatever</h2>;
     } else if (gamer.pronouns.includes("him")) {
@@ -52,7 +52,93 @@ function GamerDetails({ loggedIn }) {
     } else if (gamer.pronouns.includes("her")) {
       return <img src={partyup_girl} alt="partyup_girl" id="partyup_girl" />;
     }
-  }
+  };
+
+  const createOneMediaLink = (socialmedia) => {
+    if (socialmedia.includes("tumblr")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          Tumblr
+        </a>
+      );
+    } else if (socialmedia.includes("reddit")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          Reddit
+        </a>
+      );
+    } else if (socialmedia.includes("instagram")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          Instagram
+        </a>
+      );
+    } else if (socialmedia.includes("twitter")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          Twitter
+        </a>
+      );
+    } else if (socialmedia.includes("facebook")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          Facebook
+        </a>
+      );
+    } else if (socialmedia.includes("youtube")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          YouTube
+        </a>
+      );
+    } else if (socialmedia.includes("twitch")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          Twitch
+        </a>
+      );
+    } else if (socialmedia.includes("github")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          GitHub
+        </a>
+      );
+    } else if (socialmedia.includes("linked")) {
+      return (
+        <a href={socialmedia} target="_blank" rel="noreferrer noopener">
+          LinkedIn
+        </a>
+      );
+    }
+    return <a href={socialmedia}>Placeholder</a>;
+  };
+
+  const createSocialMediaLinks = (gamer) => {
+    if (
+      gamer.socialmediaone === undefined ||
+      gamer.socialmediatwo === undefined ||
+      gamer.socialmediathree === undefined
+    ) {
+      return <h2>whatever</h2>;
+    }
+    const gamerSocials = [
+      gamer.socialmediaone.toLowerCase(),
+      gamer.socialmediatwo.toLowerCase(),
+      gamer.socialmediathree.toLowerCase(),
+    ];
+    const heading = document.createElement("h5");
+    for (const social of gamerSocials) {
+      heading.append(createOneMediaLink(social));
+    }
+
+    return (
+      <h5>
+        {createOneMediaLink(gamerSocials[0])}
+        {createOneMediaLink(gamerSocials[1])}
+        {createOneMediaLink(gamerSocials[2])}
+      </h5>
+    );
+  };
 
   return (
     <div className="gamer-details">
@@ -62,7 +148,7 @@ function GamerDetails({ loggedIn }) {
           <h5 id="age">{`${gamer.pronouns} - ${gamer.age} years old`}</h5>
           <img src={gamer.image} alt={gamer.gamertag} />
           <h3 id="tagline">{gamer.tagline}</h3>
-          <h5 id="social-media">{`${gamer.socialmediaone} - ${gamer.socialmediatwo} - ${gamer.socialmediathree}`}</h5>
+          <div>{createSocialMediaLinks(gamer)}</div>
         </section>
       </section>
       <section className="gamer-info">
