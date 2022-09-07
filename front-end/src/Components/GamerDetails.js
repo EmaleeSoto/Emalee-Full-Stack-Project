@@ -56,13 +56,14 @@ function GamerDetails({ loggedIn }) {
 
   return (
     <div className="gamer-details">
-      <section className="gamer-image">
-        <h2 id="gamertag">{gamer.gamertag}</h2>
-        <h5 id="age">{`${gamer.pronouns} - ${gamer.age} years old`}</h5>
-        <img src={gamer.image} alt={gamer.gamertag} />
-        <h3 id="tagline">{gamer.tagline}</h3>
-        <h5>{`${gamer.socialmediaone} - ${gamer.socialmediatwo} - ${gamer.socialmediathree}`}</h5>
-        <div>{displayIcon(gamer)}</div>
+      <section>
+        <section className="gamer-image">
+          <h2 id="gamertag">{gamer.gamertag}</h2>
+          <h5 id="age">{`${gamer.pronouns} - ${gamer.age} years old`}</h5>
+          <img src={gamer.image} alt={gamer.gamertag} />
+          <h3 id="tagline">{gamer.tagline}</h3>
+          <h5 id="social-media">{`${gamer.socialmediaone} - ${gamer.socialmediatwo} - ${gamer.socialmediathree}`}</h5>
+        </section>
       </section>
       <section className="gamer-info">
         <h3>Plays {gamer.game}</h3>
@@ -71,6 +72,7 @@ function GamerDetails({ loggedIn }) {
         <h4 id="about-title">About Me: </h4>
         <p className="about-info">{gamer.about}</p>
         <h5>{gamer.status ? "Actively Looking 🟢" : "Not Available 🔴"}</h5>
+        <div>{displayIcon(gamer)}</div>
         <div className="showNavigation" id={loggedIn ? "show" : "hide"}>
           <Link to={`/gamers/${gamer.id}/edit`} id="edit-button">
             <button>Edit</button>

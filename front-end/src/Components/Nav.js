@@ -35,9 +35,11 @@ export default function Nav({ signOut, loggedIn }) {
         </Link>
       </div>
       {loggedIn ? (
-        <button className="tab" onClick={signOut}>
-          Log Out
-        </button>
+        <div id="login-wrapper">
+          <button className="tab" id="logout" onClick={signOut}>
+            Log Out
+          </button>
+        </div>
       ) : (
         <div className="tab" id="login-wrapper">
           <Link to="/sign-up" id="sign-up">
