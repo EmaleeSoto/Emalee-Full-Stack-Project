@@ -7,7 +7,9 @@ export default function Nav({ signOut, loggedIn }) {
       <div className="logo-wrapper">
         <span>
           <img src={controller} alt="controller" />
-          <h3>Party Up!</h3>
+          <h3>
+            Party <span>Up!</span>
+          </h3>
         </span>
       </div>
       <div className="tab">

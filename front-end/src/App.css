@@ -4,7 +4,6 @@ nav {
   text-align: center;
   background-color: rgba(70, 70, 70, .4); 
   z-index: 101;
-  color: #BD110F;
 }
 
 nav span {
@@ -66,7 +65,7 @@ nav #about {
 
 nav #sign-up button:hover {
   cursor: pointer;
-  color: red;
+  color: white;
   background-color: black;
 }
 
@@ -91,6 +90,14 @@ nav img:hover {
   animation-duration: 5000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
+}
+
+.logo-wrapper h3 {
+  color: #F5C3CB;
+}
+
+.logo-wrapper span {
+  color: white;
 }
 
 .fadein {
