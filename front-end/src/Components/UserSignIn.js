@@ -21,9 +21,10 @@ export default function UserSignIn({ setLogin }) {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        console.log(user);
-        alert("Success!");
-        navigate("/gamers");
+        if (user) {
+          alert("Welcome back! You've been logged in!");
+          navigate("/gamers");
+        }
         // ...
       })
       .catch((error) => {
@@ -32,7 +33,6 @@ export default function UserSignIn({ setLogin }) {
         console.log(errorCode);
         alert(errorCode);
       });
-    navigate("/gamers");
   };
   return (
     <div className="sign-up-section">

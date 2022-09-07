@@ -20,8 +20,12 @@ export default function SignUp({ setLogin }) {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user; //creates user
-        console.log(user);
-        alert("Welcome! You have been signed into your new account");
+        if (user) {
+          alert(
+            "Welcome to PartyUp! You have been signed into your new account."
+          );
+          navigate("/gamers");
+        }
         // ...
       })
       .catch((error) => {
@@ -32,7 +36,6 @@ export default function SignUp({ setLogin }) {
         );
         // ..
       });
-    navigate("/gamers");
   };
 
   return (
