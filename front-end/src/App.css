@@ -249,7 +249,6 @@ nav img:hover {
   margin-top: 3%;
   position: relative;
   left: 30%;
-  overflow-y: scroll;
   width: 500px;
   color: #FFC0CB;
   font-weight: bold;
@@ -427,7 +426,6 @@ input[type=submit]:hover {
 .sign-up-section {
   text-align: center;
   margin-top: 3%;
-  overflow-y: scroll;
   color: #FFC0CB;
   font-weight: bold;
 }
