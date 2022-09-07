@@ -10,7 +10,6 @@ export default function UserSignIn({ setLogin }) {
   });
 
   const navigate = useNavigate();
-
   const auth = getAuth(app);
 
   const handleTextChange = (event) => {
@@ -33,6 +32,7 @@ export default function UserSignIn({ setLogin }) {
         console.log(errorCode);
         alert(errorCode);
       });
+    navigate("/gamers");
   };
   return (
     <div className="sign-up-section">

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import app from "../firebase";
 
 export default function SignUp({ setLogin }) {
@@ -7,7 +8,7 @@ export default function SignUp({ setLogin }) {
     email: "",
     password: "",
   });
-
+  const navigate = useNavigate();
   const auth = getAuth(app);
 
   const handleTextChange = (event) => {
@@ -31,8 +32,7 @@ export default function SignUp({ setLogin }) {
         );
         // ..
       });
-
-    document.querySelector("input").value = "";
+    navigate("/gamers");
   };
 
   return (

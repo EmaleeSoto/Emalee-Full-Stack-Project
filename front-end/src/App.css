@@ -23,7 +23,7 @@ nav a:hover {
   color: white;
 }
 
-nav #sign-up button{
+nav #sign-up button, #logout{
   grid-column: 8;
   color: #380604;
   background-color: #F094A4;
@@ -54,7 +54,7 @@ nav #login-wrapper a {
   float: none;
 }
 
-nav #login-wrapper span {
+nav #login-wrapper span, #logout {
   font-family: monospace;
   font-style: oblique;
 }
@@ -63,7 +63,7 @@ nav #about {
   float: none;
 }
 
-nav #sign-up button:hover {
+nav #sign-up button:hover, #logout:hover {
   cursor: pointer;
   color: white;
   background-color: black;
