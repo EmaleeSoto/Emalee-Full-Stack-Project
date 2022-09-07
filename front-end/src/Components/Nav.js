@@ -42,9 +42,14 @@ export default function Nav({ signOut, loggedIn }) {
         </div>
       ) : (
         <div className="tab" id="login-wrapper">
+          <Link to="/sign-in" id="sign-in">
+            <button>
+              <span>Login</span>
+            </button>
+          </Link>
           <Link to="/sign-up" id="sign-up">
             <button>
-              <span>Login/Sign Up</span>
+              <span>Sign Up</span>
             </button>
           </Link>
         </div>

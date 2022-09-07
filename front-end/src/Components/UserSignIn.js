@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import app from "../firebase";
 
-export default function SignUp({ setLogin }) {
+export default function UserSignIn({ setLogin }) {
   const [profile, setProfile] = useState({
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const auth = getAuth(app);
 
@@ -14,27 +17,23 @@ export default function SignUp({ setLogin }) {
     setProfile({ ...profile, [event.target.id]: event.target.value });
   };
 
-  const signUp = () => {
-    createUserWithEmailAndPassword(auth, profile.email, profile.password)
+  const signIn = () => {
+    signInWithEmailAndPassword(auth, profile.email, profile.password)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user; //creates user
+        const user = userCredential.user;
         console.log(user);
-        alert("Welcome! You have been signed into your new account");
+        alert("Success!");
+        navigate("/gamers");
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
-
-        alert(
-          `${errorCode} - Please ensure you are entering a valid email address and password`
-        );
-        // ..
+        // const errorMessage = error.message;
+        console.log(errorCode);
+        alert(errorCode);
       });
-
-    document.querySelector("input").value = "";
   };
-
   return (
     <div className="sign-up-section">
       <label htmlFor="email">Email: </label>
@@ -57,8 +56,8 @@ export default function SignUp({ setLogin }) {
         required
       />
       <br></br>
-      <button id="create" onClick={signUp}>
-        Create an Account
+      <button id="login" onClick={signIn}>
+        Log into your Account
       </button>
     </div>
   );

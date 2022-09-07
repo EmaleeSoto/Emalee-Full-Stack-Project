@@ -6,6 +6,7 @@ import Index from "./Pages/Index";
 import Show from "./Pages/Show";
 import New from "./Pages/New";
 import Edit from "./Pages/Edit";
+import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import DeleteModal from "./Components/DeleteModal";
 import "./App.css";
@@ -54,6 +55,7 @@ function App() {
             <Route path="/gamers/:id" element={<Show loggedIn={loggedIn} />} />
             <Route path="/newprofile" element={<New />} />
             <Route path="/gamers/:id/edit" element={<Edit />} />
+            <Route path="/sign-in" element={<SignIn setLogin={setLogin} />} />
             <Route path="/sign-up" element={<SignUp setLogin={setLogin} />} />
             <Route path="/deleted-profile" element={<DeleteModal />} />
             <Route path="*" element={<NotFound />} />

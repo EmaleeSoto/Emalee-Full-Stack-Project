@@ -24,7 +24,7 @@ nav a:hover {
   color: white;
 }
 
-nav button {
+nav #sign-up button{
   grid-column: 8;
   color: #380604;
   background-color: #F094A4;
@@ -32,6 +32,17 @@ nav button {
   border-radius: 5px;
   font-size: large;
   margin-top: 3%;
+}
+
+nav #sign-in button{
+  grid-column: 8;
+  color: #F094A4;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  margin-top: 3%;
+  margin-right: 2%;
 }
 
 nav #login-wrapper {
@@ -53,10 +64,15 @@ nav #about {
   float: none;
 }
 
-nav button:hover {
+nav #sign-up button:hover {
   cursor: pointer;
   color: red;
   background-color: black;
+}
+
+nav #sign-in button:hover {
+  cursor: pointer;
+  color: white;
 }
 
 nav img {
@@ -425,6 +441,10 @@ input[type=submit] {
 input[type=submit]:hover {
   border: 1px solid #FF0A00;
   cursor: pointer;
+}
+
+.SignIn, .SignUp h2{
+  text-align: center;
 }
 
 .sign-up-section {
